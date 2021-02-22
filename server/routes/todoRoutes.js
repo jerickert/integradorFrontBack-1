@@ -37,8 +37,8 @@ router.put("/:id" ,(req,res,next)=>{
   router.delete("/:id" ,(req,res,next)=>{
     const id =req.params.id
       Todo.findByPk(id)
-      .then((todo)=>{
-          res.send(todo.destroy())
+      .then((task)=>{
+          res.send(task.destroy())
       })
       .catch((err)=>{
           console.log(err)
